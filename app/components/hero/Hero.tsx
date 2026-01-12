@@ -29,6 +29,15 @@ export default function Hero() {
               <a href="#contact" className="opacity-70">
                 Get in touch
               </a>
+
+              <a
+                href="/Abubakar-Abdulhakeem-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition"
+              >
+                Download CV
+              </a>
             </div>
           </div>
 
