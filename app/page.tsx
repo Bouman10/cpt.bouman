@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const skills = [
@@ -46,6 +47,32 @@ const projects = [
 
 export default function Home() {
   return (
+    <>
+      <Script
+        id="person-schema"
+        type="application/id+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Abubakar Abdulhakeem",
+            url: "https://cpt-bouman.vercel.app",
+            image: "https://cpt-bouman.vercel.app/profile.jpg",
+            jobTitle: "Frontend Developer",
+            sameAs: [
+              "https://github.com/Bouman10",
+              "https://www.linkedin.com/in/abubakar-abdulhakeem",
+            ],
+            knowsAbout: [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Frontend Development",
+            ],
+          }),
+        }}
+    />
+
     <main className="min-h-screen bg-[#05070a] text-white">
       <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
         {/* NAVBAR */}
@@ -284,5 +311,6 @@ export default function Home() {
         </footer>
       </div>
     </main>
+  </>
   );
 }
